@@ -78,6 +78,7 @@ function App() {
         <div className="flex items-center justify-between">
           <input
             type="text"
+  
             ref={inputRef}
             placeholder="Enter Your Location"
             className="text-xl border-b
