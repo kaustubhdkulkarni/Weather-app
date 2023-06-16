@@ -51,6 +51,15 @@ function App() {
       .then((data) => {
         console.log(data, "----data--");
         setApiData(null);
+        if (data.cod == 404 || data.cod == 400) {
+          // ARRAY OF OBJ
+          setShowWeather([
+            {
+              type: " City Not Found",
+              img: "https://cdn-icons-png.flaticon.com/512/4275/4275497.png",
+            },
+          ]);
+        }
         setShowWeather(
           WeatherTypes.filter(
             (weather) => weather.type === data.weather[0].main
